@@ -1,8 +1,8 @@
-export default (req, res) => {
-  const date = new Date()
-    .toISOString()
-    .replace(/T/, ' ')
-    .replace(/\..+/, '')
+import { Photon } from '@prisma/photon'
 
-  res.json({ date })
+const photon = new Photon({})
+
+export default async (req, res) => {
+  const data = await photon.users.findMany()
+  res.json({ date: data.length })
 }
