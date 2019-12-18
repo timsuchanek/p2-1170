@@ -1,8 +1,7 @@
-import { Photon } from '@prisma/photon'
-
-const photon = new Photon({})
+import getMessage from 'dummy-executable-package'
 
 export default async (req, res) => {
-  const data = await photon.users.findMany()
-  res.json({ date: data.length })
+  const date = await getMessage()
+
+  res.json({ date })
 }
