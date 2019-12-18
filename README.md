@@ -1,4 +1,5 @@
 # Minimal reproduction of incorrect access permissions of assets with Next.js and Now
+As reported in https://github.com/prisma/prisma2/issues/1170
 
 In `date.js` we have a minimal api defined like so:
 
